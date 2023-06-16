@@ -1,5 +1,5 @@
 {
-  "name": "zuul",
+  "name": "flaskprojectfrontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,8 +8,15 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "axios": "^1.4.0",
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "element-plus": "^2.3.4",
+    "js-audio-recorder": "^1.0.7",
+    "jsencrypt": "^3.3.2",
+    "vue": "^3.2.13",
+    "vue-router": "^4.0.13",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
