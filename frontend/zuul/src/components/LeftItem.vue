@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <img class="head" src="https://pp.myapp.com/ma_icon/0/icon_42284557_1517984341/96"/>
+        <img class="head" src="../assets/robot.jpg"/>
 
         <div class="content">
             <div class="text" v-if="type===1">

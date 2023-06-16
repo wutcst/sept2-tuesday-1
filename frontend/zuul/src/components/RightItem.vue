@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <img class="head"
-             src="https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1068485212,3292662520&fm=111&gp=0.jpg"/>
+             src="../assets/image_me.jpg"/>
         <div class="content">
             <div class="text" v-if="type===1" style="word-break: break-all;">
                 {{content}}
