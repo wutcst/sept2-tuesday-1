@@ -1,7 +1,10 @@
 <template>
+
   <router-view :scn_width="screenSize.scn_width"></router-view>
+
 </template>
 <script>
+
 
 
 export default {
@@ -25,10 +28,12 @@ export default {
       this.screenSize.scn_height = document.documentElement.clientHeight;
     }
   }
+  
 }
 </script>
 
-<style>
+<style scoped>
+
 #app {
   
   margin-top: 0px;
