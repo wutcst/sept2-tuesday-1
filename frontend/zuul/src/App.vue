@@ -1,20 +1,47 @@
 <template>
-  <div id="app">
-    <Chat></Chat>
-</div>
-</template>
 
+  <router-view :scn_width="screenSize.scn_width"></router-view>
+
+</template>
 <script>
-  import Chat from './components/Chat.vue'
+
+
+
 export default {
   name: 'App',
-        components: {
-            Chat
-        }
+  components: {
+
+
+  },
+  data(){
+    return{
+      screenSize:{
+        scn_width: document.documentElement.clientWidth,
+        scn_height: document.documentElement.clientHeight
+      }
+    }
+  },
+
+  mounted() {
+    window.onresize = ()=>{
+      this.screenSize.scn_width = document.documentElement.clientWidth;
+      this.screenSize.scn_height = document.documentElement.clientHeight;
+    }
+  }
   
 }
 </script>
 
-<style>
+<style scoped>
 
+#app {
+  
+  margin-top: 0px;
+}
+body{
+  height : 100%;
+}
+a{
+  text-decoration: none;
+}
 </style>
