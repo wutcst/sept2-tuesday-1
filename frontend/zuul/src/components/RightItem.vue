@@ -3,10 +3,10 @@
         <img class="head"
              src="../assets/image_me.jpg"/>
         <div class="content">
-            <div class="text" v-if="type===1" style="word-break: break-all;">
+            <div class="text" style="word-break: break-all;">
                 {{content}}
             </div>
-            <img class="img" :src="content" v-else-if="type===2"/>
+            
         </div>
     </div>
 </template>
@@ -15,7 +15,7 @@
 
     export default {
         name: "RightItem",
-        props: ['id', 'type', 'content']
+        props: ['id',  'content']
     }
 </script>
 

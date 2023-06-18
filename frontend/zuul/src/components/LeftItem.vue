@@ -3,25 +3,23 @@
         <img class="head" src="../assets/robot.jpg"/>
 
         <div class="content">
-            <div class="text" v-if="type===1">
+            <div class="text" >
                 {{content}}
             </div>
-            <img class="img" :src="content" v-else-if="type===2" @click="preview(content)"/>
+            
         </div>
 
     </div>
 </template>
 
 <script>
-    import ImagePreview from "vant/lib/image-preview";
+    
 
     export default {
         name: "LeftItem",
-        props: ['id', 'type', 'content'],
+        props: ['id', 'content'],
         methods: {
-            preview(url){
-                ImagePreview([url])
-            }
+         
         }
     }
 </script>

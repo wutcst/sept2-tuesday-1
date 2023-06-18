@@ -3,8 +3,8 @@
         <div class="list" id="list" ref="list" >
             <ul>
                 <li v-for="(item,index) in msglist" :key="index">
-                    <RightItem :id="item.id" :type="item.type" :content="item.content" v-if="item.me"></RightItem>
-                    <LeftItem :id="item.id" :type="item.type" :content="item.content" v-else></LeftItem>
+                    <RightItem :id="item.id"  :content="item.content" v-if="item.me"></RightItem>
+                    <LeftItem :id="item.id" :content="item.content" v-else></LeftItem>
                     <div v-scroll style="height: 0"></div>
                 </li>
             </ul>
@@ -35,10 +35,26 @@
                 text: '',
                 msglist: [{
                     id: 1,
-                    type: 1,
-                    content: '欢迎你！',
+                    content: 'Welcome to the World of Zuul!',
                     me: false
-                }]
+                },
+            {
+                id: 2,
+                content: 'World of Zuul is a new, incredibly boring adventure game.',
+                me: false   
+            },
+            {
+                id: 3,
+                content: 'Type "help" if you need help.',
+                me: false   
+            },
+            {
+                id: 4,
+                content: 'You are outside the main entrance of the university.Exits: east south west',
+                me: false   
+            },
+        
+        ]
             }
         },
         methods: {
@@ -46,7 +62,6 @@
                 if (this.text) {
                     this.msglist.push({
                         id: this.msglist[this.msglist.length - 1].id + 1,
-                        type: 1,
                         content: this.text,
                         me: true
                     })
@@ -55,7 +70,6 @@
                         if(res.data.flag == true){
                             this.msglist.push({
                             id: this.msglist[this.msglist.length - 1].id + 1,
-                            type: 1,
                             content: res.data.data,
                             me: false
                     })
