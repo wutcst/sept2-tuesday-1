@@ -1,10 +1,11 @@
 <template>
+<div :style="bgurl">
 <el-container>
   <el-header>
     <!--  注册-->
     <el-row>
-      <el-col :span="4" :push="5" >
-        <div>注册</div>
+      <el-col :span="4" :push="6" >
+        <div class="zhuce">注册</div>
       </el-col>
     </el-row>
     <div class="el-space"></div>
@@ -46,6 +47,7 @@
     </div>
   </el-footer>
 </el-container>
+</div>
 </template>
 
 <script>
@@ -61,11 +63,20 @@ export default {
       }
     };
     return{
+      bgurl: {
+            backgroundImage: "url(" + require("../assets/img/bg2.png") + ")",
+            backgroundRepeat:'no-repeat',
+            backgroundSize: "cover",
+            minHeight: "100vh",
+            position: "relative",
+            backgroundPosition: "center center",
+          },
     form:{
       userName:'',
       passwd:'',
       email:''
     },
+   
       rules:{
       userName: [{required:true, message:'请输入用户名', trigger:'blur',}],
       passwd:[{required:true, message:'请输入密码', trigger:'blur',},{validator: checkLen,trigger: 'blur'}],
@@ -125,8 +136,16 @@ export default {
 </script>
 
 <style scoped>
+.hidden-xs-only{
+  color: azure;
+}
+.zhuce{
+  font-size: 30px;
+  color: azure;
+  letter-spacing: 4px;
+}
 .el-container{
-  margin-top: 10%;
+  padding-top: 10%;
   margin-left: 15%;
 }
 </style>

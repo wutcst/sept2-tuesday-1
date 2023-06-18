@@ -18,6 +18,7 @@ export default {
       }
     }
   },
+
   mounted() {
     window.onresize = ()=>{
       this.screenSize.scn_width = document.documentElement.clientWidth;
@@ -29,9 +30,12 @@ export default {
 
 <style>
 #app {
-
+  
+  margin-top: 0px;
 }
-
+body{
+  height : 100%;
+}
 a{
   text-decoration: none;
 }

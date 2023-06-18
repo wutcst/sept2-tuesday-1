@@ -1,10 +1,11 @@
 <template>
+  <div :style="bgurl">
   <el-container>
     <el-header>
       <!--  登录-->
       <el-row>
         <el-col :span="4" :push="8">
-          <div style="font-size: 30px">登录</div>
+          <div class="color" style="font-size: 30px">登录</div>
         </el-col>
       </el-row>
       <div class="el-space"></div>
@@ -60,15 +61,16 @@
     <el-footer>
     <el-row style="margin-left: 20%">
       <el-col :span="2" :xs="6">
-       <router-link to="/register">注册</router-link>
+       <router-link to="/register"><span>注册</span></router-link>
       </el-col>
       <el-col :span="5" :xs="4"></el-col>
       <el-col :span="3" :xs="8">
-        <router-link to="/forgetpwd">忘记密码?</router-link>
+        <router-link to="/forgetpwd"><span>忘记密码?</span></router-link>
       </el-col>
     </el-row>
     </el-footer>
   </el-container>
+</div>
 </template>
 <script>
 import {encrypt} from "../../encryptor";
@@ -83,6 +85,14 @@ export default {
       }
     };
     return {
+      bgurl: {
+            backgroundImage: "url(" + require("../assets/img/bg1.png") + ")",
+            backgroundRepeat:'no-repeat',
+            backgroundSize: "cover",
+            minHeight: "100vh",
+            position: "relative",
+            backgroundPosition: "center center",
+          },
       form:{
         userName:"",
         passwd:"",
@@ -130,11 +140,17 @@ export default {
 </script>
 
 <style scoped>
+span{
+  color:white;
+}
+.color{
+  color:white;
+}
 .leftBtn{
 width: 100%;
 }
 .el-container{
-  margin-top: 15%;
+  padding-top: 15%;
   margin-left: 15%;
 }
 </style>

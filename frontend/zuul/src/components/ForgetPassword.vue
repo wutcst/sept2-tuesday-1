@@ -1,9 +1,10 @@
 <template>
+  <div :style="bgurl">
 <el-container>
   <el-header>
     <el-row>
-      <el-col :span="4" :push="5" :xs="8">
-        <div>修改密码</div>
+      <el-col :span="4" :push="6" :xs="8">
+        <div class="change">修改密码</div>
       </el-col>
     </el-row>
     <div class="el-space"></div>
@@ -55,6 +56,7 @@
     </div>
   </el-footer>
 </el-container>
+</div>
 </template>
 
 <script>
@@ -77,6 +79,14 @@ export default {
       }
     };
     return {
+      bgurl: {
+            backgroundImage: "url(" + require("../assets/img/bg3.png") + ")",
+            backgroundRepeat:'no-repeat',
+            backgroundSize: "100% 100%",
+            minHeight: "100vh",
+            position: "relative",
+            backgroundPosition: "center center",
+          },
       form:{
         userName:'',
         passwd:'',
@@ -144,8 +154,15 @@ export default {
 </script>
 
 <style scoped>
+.hidden-xs-only{
+  color: azure;
+}
+.change{
+  color: azure;
+  font-size: 30px;
+}
 .el-container{
-  margin-top: 10%;
+  padding-top: 10%;
   margin-left: 15%;
 }
 </style>
