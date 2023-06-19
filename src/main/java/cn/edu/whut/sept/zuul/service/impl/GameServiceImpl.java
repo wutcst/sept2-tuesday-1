@@ -1,5 +1,6 @@
 package cn.edu.whut.sept.zuul.service.impl;
 
+import cn.edu.whut.sept.zuul.command.Command;
 import cn.edu.whut.sept.zuul.domain.Info;
 import cn.edu.whut.sept.zuul.domain.Result;
 import cn.edu.whut.sept.zuul.game.Game;
@@ -19,7 +20,11 @@ public class GameServiceImpl implements GameService {
 
     @Override
     public Result process(String cmd) {
-        Info info = game.processCommand(parser.getCommand(cmd));
+        Command command = parser.getCommand(cmd);
+        if(command==null){
+            return Result.success("invalid command!\n");
+        }
+        Info info = game.processCommand(command);
         if(info.isWantQuit()){
             return Result.success("bye bye!\n");
         }else{

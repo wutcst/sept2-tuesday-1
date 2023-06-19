@@ -54,7 +54,6 @@ public class Parser
             }
             return cmd;
         }else{
-            System.out.println("invalid command.");
             return null;
         }
     }
