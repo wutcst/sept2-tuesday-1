@@ -116,7 +116,9 @@
         .bottom {
             width: 100%;
             position: fixed;
-            bottom: 70px;
+            bottom: 0px;
+            padding-bottom: 70px;
+            background-color: white;
 
             .line {
                 width: 100%;
