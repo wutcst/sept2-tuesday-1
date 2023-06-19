@@ -13,7 +13,7 @@ import {Lazyload} from 'vant';
 const app=createApp(App)
 app.directive('scroll', {
 
-    inserted(el) {
+    mounted(el) {
   
         el.scrollIntoView()
         

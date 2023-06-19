@@ -1,7 +1,7 @@
 <template>
-    <div class="container">
+    <div class="container" >
         <div class="list" id="list" ref="list" >
-            <ul>
+            <ul >
                 <li v-for="(item,index) in msglist" :key="index">
                     <RightItem :id="item.id"  :content="item.content" v-if="item.me"></RightItem>
                     <LeftItem :id="item.id" :content="item.content" v-else></LeftItem>
@@ -24,8 +24,7 @@
 <script>
     import LeftItem from "@/components/LeftItem";
     import RightItem from "@/components/RightItem";
-
-
+    
 
     export default {
         name: "Chat",
@@ -91,12 +90,19 @@
                 }
             },
     
-        }
+        },
+
+
+    
+     
     }
+
+    
 </script>
 
 <style scoped lang="scss">
     .container {
+        
         ul {
             padding: 0;
             margin: 0;
