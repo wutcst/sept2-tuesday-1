@@ -126,7 +126,7 @@ export default {
               this.$message.success("登陆成功")
               localStorage.setItem('token',res.data.data.token)
               localStorage.setItem('name',this.form.userName)
-              this.$router.push('/home')
+              this.$router.push('/chat')
             }
           },()=>{
             this.$message.error('系统错误,登陆失败')
