@@ -38,7 +38,7 @@ public class QuitCommand implements Command{
     public Object processCommand(Object... args) {
         StringBuilder sb = new StringBuilder();
         if(this.getSecondWord()!=null && !"".equals(this.getSecondWord())) {
-            sb.append("Quit what?");
+            sb.append("Quit what?\n");
             return new Info(sb.toString(),false,null);
         }else {
             return new Info(sb.toString(),true,null);

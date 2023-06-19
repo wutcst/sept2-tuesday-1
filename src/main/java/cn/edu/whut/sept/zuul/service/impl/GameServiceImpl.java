@@ -21,7 +21,7 @@ public class GameServiceImpl implements GameService {
     public Result process(String cmd) {
         Info info = game.processCommand(parser.getCommand(cmd));
         if(info.isWantQuit()){
-            return Result.success("bye bye!");
+            return Result.success("bye bye!\n");
         }else{
             return Result.success(info.getRes());
         }

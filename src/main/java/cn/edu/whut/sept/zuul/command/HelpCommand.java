@@ -37,11 +37,11 @@ public class HelpCommand implements Command{
     @Override
     public Object processCommand(Object... args) {
         StringBuilder sb = new StringBuilder();
-        sb.append("You are lost. You are alone. You wander\n");
-        sb.append("around at the university.\n\n");
+        sb.append("You are lost. You are alone. You wander ");
+        sb.append("around at the university.\n");
         sb.append("Your command words are:\n");
         CommandWords cmd = (CommandWords) args[1];
-        sb.append(cmd.showAll()+"\n");
+        sb.append(cmd.showAll());
         return new Info(sb.toString(),false,null);
     }
 }
