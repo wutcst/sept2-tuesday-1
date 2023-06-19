@@ -74,7 +74,7 @@
 
                                             this.msglist.push({
                                             id: this.msglist[this.msglist.length - 1].id + 1,
-                                            content: str,
+                                            content: temp[i],
                                             me: false
                                               })
                             } 
