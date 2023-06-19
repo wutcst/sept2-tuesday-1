@@ -79,6 +79,8 @@ public class UserController {
             e.printStackTrace();
         }
         res.setUserName(u.getUserName());
+        res.setEmail(u.getEmail());
+        res.setId(u.getId());
         return res;
     }
 

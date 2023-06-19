@@ -68,11 +68,17 @@
                     
                     this.$http.post('http://localhost:80/cmd',{'command':this.text}).then(res =>{
                         if(res.data.flag == true){
-                            this.msglist.push({
-                            id: this.msglist[this.msglist.length - 1].id + 1,
-                            content: res.data.data,
-                            me: false
-                    })
+                            var temp = []
+                            temp = res.data.data.split('\n');
+                            for(var i =0; i<temp.length-1;i++){
+
+                                            this.msglist.push({
+                                            id: this.msglist[this.msglist.length - 1].id + 1,
+                                            content: str,
+                                            me: false
+                                              })
+                            } 
+
                         }
                         else{
                             alert(""+res.data.message)
