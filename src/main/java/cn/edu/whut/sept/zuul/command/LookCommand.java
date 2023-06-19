@@ -39,7 +39,7 @@ public class LookCommand implements Command{
     public Object processCommand(Object... args) {
         StringBuilder sb = new StringBuilder();
         Room room = (Room) args[0];
-        sb.append(room.getLongDescription());
+        sb.append(room.getLongDescription()+"\n");
         sb.append("there are ");
         for (Object o:room.getGoods()){
             sb.append(o+",");

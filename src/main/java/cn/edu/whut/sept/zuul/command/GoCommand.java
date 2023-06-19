@@ -55,7 +55,7 @@ public class GoCommand implements Command{
                 }
                 else {
                     curRoom = nextRoom;
-                   sb.append(curRoom.getLongDescription());
+                   sb.append(curRoom.getLongDescription()+"\n");
                 }
             }
         }
